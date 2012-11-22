@@ -1,14 +1,18 @@
 //
-//  BOAppDelegate.m
+//  AppDelegate.m
 //  minizip
 //
 //  Created by Daniel Eggert on 11/22/12.
 //  Copyright (c) 2012 Daniel Eggert. All rights reserved.
 //
 
-#import "BOAppDelegate.h"
+#import "AppDelegate.h"
 
-@implementation BOAppDelegate
+#import "BOMiniZipArchiver.h"
+
+
+
+@implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -16,7 +20,38 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    [self createArchive];
+    
     return YES;
+}
+
+- (void)createArchive;
+{
+    NSURL *directory = [NSBundle mainBundle].bundleURL;
+    NSDirectoryEnumerator *enumerator = [[NSFileManager defaultManager] enumeratorAtURL:directory includingPropertiesForKeys:@[NSURLIsRegularFileKey] options:0 errorHandler:^BOOL(NSURL *url, NSError *error) {
+        return YES;
+    }];
+    
+    NSError *error = nil;
+    NSURL *outputFileURL = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:YES error:&error];
+    outputFileURL = [outputFileURL URLByAppendingPathComponent:@"output.zip"];
+    
+    BOMiniZipArchiver *archiver = [[BOMiniZipArchiver alloc] initWithFileURL:outputFileURL append:NO error:&error];
+    NSAssert(archiver != nil, @"%@", error);
+    
+    for (NSURL *fileURL in enumerator) {
+        NSNumber *isFile = nil;
+        if (![fileURL getResourceValue:&isFile forKey:NSURLIsRegularFileKey error:NULL] ||
+            ![isFile boolValue])
+        {
+            continue;
+        }
+
+        NSAssert([archiver appendFileAtURL:fileURL error:&error], @"%@", error);
+    }
+    
+    NSAssert([archiver finishEncoding:&error], @"%@", error);
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

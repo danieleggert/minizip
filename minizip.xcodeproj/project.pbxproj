@@ -12,7 +12,7 @@
 		3E701ECE165E49BB00FF8579 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E701ECD165E49BB00FF8579 /* CoreGraphics.framework */; };
 		3E701ED4165E49BB00FF8579 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3E701ED2165E49BB00FF8579 /* InfoPlist.strings */; };
 		3E701ED6165E49BB00FF8579 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E701ED5165E49BB00FF8579 /* main.m */; };
-		3E701EDA165E49BB00FF8579 /* BOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E701ED9165E49BB00FF8579 /* BOAppDelegate.m */; };
+		3E701EDA165E49BB00FF8579 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E701ED9165E49BB00FF8579 /* AppDelegate.m */; };
 		3E701EDC165E49BB00FF8579 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E701EDB165E49BB00FF8579 /* Default.png */; };
 		3E701EDE165E49BB00FF8579 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E701EDD165E49BB00FF8579 /* Default@2x.png */; };
 		3E701EE0165E49BB00FF8579 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E701EDF165E49BB00FF8579 /* Default-568h@2x.png */; };
@@ -21,6 +21,13 @@
 		3E701EEA165E49BB00FF8579 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E701ECB165E49BB00FF8579 /* Foundation.framework */; };
 		3E701EF2165E49BB00FF8579 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3E701EF0165E49BB00FF8579 /* InfoPlist.strings */; };
 		3E701EF5165E49BB00FF8579 /* minizipTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E701EF4165E49BB00FF8579 /* minizipTests.m */; };
+		3E701EFF165E49F300FF8579 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E701EFE165E49F300FF8579 /* libz.dylib */; };
+		3E701F0F165E4B5D00FF8579 /* ioapi.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3E701F02165E4B5D00FF8579 /* ioapi.mm */; };
+		3E701F14165E4B5D00FF8579 /* mztools.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3E701F09165E4B5D00FF8579 /* mztools.mm */; };
+		3E701F15165E4B5D00FF8579 /* unzip.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3E701F0B165E4B5D00FF8579 /* unzip.mm */; };
+		3E701F16165E4B5D00FF8579 /* zip.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3E701F0D165E4B5D00FF8579 /* zip.mm */; };
+		3E701F18165E4C7100FF8579 /* libbz2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E701F17165E4C7100FF8579 /* libbz2.dylib */; };
+		3E701F1B165E5AF400FF8579 /* BOMiniZipArchiver.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3E701F1A165E5AF400FF8579 /* BOMiniZipArchiver.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,8 +49,8 @@
 		3E701ED3165E49BB00FF8579 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3E701ED5165E49BB00FF8579 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3E701ED7165E49BB00FF8579 /* minizip-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "minizip-Prefix.pch"; sourceTree = "<group>"; };
-		3E701ED8165E49BB00FF8579 /* BOAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BOAppDelegate.h; sourceTree = "<group>"; };
-		3E701ED9165E49BB00FF8579 /* BOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BOAppDelegate.m; sourceTree = "<group>"; };
+		3E701ED8165E49BB00FF8579 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3E701ED9165E49BB00FF8579 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3E701EDB165E49BB00FF8579 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		3E701EDD165E49BB00FF8579 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		3E701EDF165E49BB00FF8579 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -53,6 +60,22 @@
 		3E701EF1165E49BB00FF8579 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3E701EF3165E49BB00FF8579 /* minizipTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = minizipTests.h; sourceTree = "<group>"; };
 		3E701EF4165E49BB00FF8579 /* minizipTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = minizipTests.m; sourceTree = "<group>"; };
+		3E701EFE165E49F300FF8579 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		3E701F01165E4B5D00FF8579 /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
+		3E701F02165E4B5D00FF8579 /* ioapi.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ioapi.mm; sourceTree = "<group>"; };
+		3E701F03165E4B5D00FF8579 /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
+		3E701F06165E4B5D00FF8579 /* miniunz.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = miniunz.c; sourceTree = "<group>"; };
+		3E701F07165E4B5D00FF8579 /* minizip.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = minizip.mm; sourceTree = "<group>"; };
+		3E701F08165E4B5D00FF8579 /* minizip.pc.in */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = minizip.pc.in; sourceTree = "<group>"; };
+		3E701F09165E4B5D00FF8579 /* mztools.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = mztools.mm; sourceTree = "<group>"; };
+		3E701F0A165E4B5D00FF8579 /* mztools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mztools.h; sourceTree = "<group>"; };
+		3E701F0B165E4B5D00FF8579 /* unzip.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = unzip.mm; sourceTree = "<group>"; };
+		3E701F0C165E4B5D00FF8579 /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unzip.h; sourceTree = "<group>"; };
+		3E701F0D165E4B5D00FF8579 /* zip.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = zip.mm; sourceTree = "<group>"; };
+		3E701F0E165E4B5D00FF8579 /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
+		3E701F17165E4C7100FF8579 /* libbz2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbz2.dylib; path = usr/lib/libbz2.dylib; sourceTree = SDKROOT; };
+		3E701F19165E5AF400FF8579 /* BOMiniZipArchiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BOMiniZipArchiver.h; sourceTree = "<group>"; };
+		3E701F1A165E5AF400FF8579 /* BOMiniZipArchiver.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BOMiniZipArchiver.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +83,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E701F18165E4C7100FF8579 /* libbz2.dylib in Frameworks */,
+				3E701EFF165E49F300FF8579 /* libz.dylib in Frameworks */,
 				3E701ECA165E49BB00FF8579 /* UIKit.framework in Frameworks */,
 				3E701ECC165E49BB00FF8579 /* Foundation.framework in Frameworks */,
 				3E701ECE165E49BB00FF8579 /* CoreGraphics.framework in Frameworks */,
@@ -82,7 +107,9 @@
 		3E701EBD165E49BB00FF8579 = {
 			isa = PBXGroup;
 			children = (
-				3E701ECF165E49BB00FF8579 /* minizip */,
+				3E701F17165E4C7100FF8579 /* libbz2.dylib */,
+				3E701F00165E4A9A00FF8579 /* minizip */,
+				3E701ECF165E49BB00FF8579 /* App */,
 				3E701EED165E49BB00FF8579 /* minizipTests */,
 				3E701EC8165E49BB00FF8579 /* Frameworks */,
 				3E701EC7165E49BB00FF8579 /* Products */,
@@ -105,18 +132,19 @@
 				3E701ECB165E49BB00FF8579 /* Foundation.framework */,
 				3E701ECD165E49BB00FF8579 /* CoreGraphics.framework */,
 				3E701EE7165E49BB00FF8579 /* SenTestingKit.framework */,
+				3E701EFE165E49F300FF8579 /* libz.dylib */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3E701ECF165E49BB00FF8579 /* minizip */ = {
+		3E701ECF165E49BB00FF8579 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				3E701ED8165E49BB00FF8579 /* BOAppDelegate.h */,
-				3E701ED9165E49BB00FF8579 /* BOAppDelegate.m */,
+				3E701ED8165E49BB00FF8579 /* AppDelegate.h */,
+				3E701ED9165E49BB00FF8579 /* AppDelegate.m */,
 				3E701ED0165E49BB00FF8579 /* Supporting Files */,
 			);
-			path = minizip;
+			path = App;
 			sourceTree = "<group>";
 		};
 		3E701ED0165E49BB00FF8579 /* Supporting Files */ = {
@@ -150,6 +178,27 @@
 				3E701EF0165E49BB00FF8579 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3E701F00165E4A9A00FF8579 /* minizip */ = {
+			isa = PBXGroup;
+			children = (
+				3E701F19165E5AF400FF8579 /* BOMiniZipArchiver.h */,
+				3E701F1A165E5AF400FF8579 /* BOMiniZipArchiver.mm */,
+				3E701F0E165E4B5D00FF8579 /* zip.h */,
+				3E701F0D165E4B5D00FF8579 /* zip.mm */,
+				3E701F01165E4B5D00FF8579 /* crypt.h */,
+				3E701F03165E4B5D00FF8579 /* ioapi.h */,
+				3E701F02165E4B5D00FF8579 /* ioapi.mm */,
+				3E701F0A165E4B5D00FF8579 /* mztools.h */,
+				3E701F09165E4B5D00FF8579 /* mztools.mm */,
+				3E701F0C165E4B5D00FF8579 /* unzip.h */,
+				3E701F0B165E4B5D00FF8579 /* unzip.mm */,
+				3E701F06165E4B5D00FF8579 /* miniunz.c */,
+				3E701F08165E4B5D00FF8579 /* minizip.pc.in */,
+				3E701F07165E4B5D00FF8579 /* minizip.mm */,
+			);
+			path = minizip;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,7 +312,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E701ED6165E49BB00FF8579 /* main.m in Sources */,
-				3E701EDA165E49BB00FF8579 /* BOAppDelegate.m in Sources */,
+				3E701EDA165E49BB00FF8579 /* AppDelegate.m in Sources */,
+				3E701F0F165E4B5D00FF8579 /* ioapi.mm in Sources */,
+				3E701F14165E4B5D00FF8579 /* mztools.mm in Sources */,
+				3E701F15165E4B5D00FF8579 /* unzip.mm in Sources */,
+				3E701F16165E4B5D00FF8579 /* zip.mm in Sources */,
+				3E701F1B165E5AF400FF8579 /* BOMiniZipArchiver.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,8 +421,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "minizip/minizip-Prefix.pch";
-				INFOPLIST_FILE = "minizip/minizip-Info.plist";
+				GCC_PREFIX_HEADER = "App/minizip-Prefix.pch";
+				INFOPLIST_FILE = "App/minizip-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -378,8 +432,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "minizip/minizip-Prefix.pch";
-				INFOPLIST_FILE = "minizip/minizip-Info.plist";
+				GCC_PREFIX_HEADER = "App/minizip-Prefix.pch";
+				INFOPLIST_FILE = "App/minizip-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

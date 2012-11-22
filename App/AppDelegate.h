@@ -1,5 +1,5 @@
 //
-//  BOAppDelegate.h
+//  AppDelegate.h
 //  minizip
 //
 //  Created by Daniel Eggert on 11/22/12.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BOAppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
